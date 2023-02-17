@@ -14,5 +14,7 @@ jobs:
           node-version: '16'
       - run: npm install -g bats
       - run: bats -v
+  lint:
+    steps:
       - run: yarn install
       - run: yarn lint
