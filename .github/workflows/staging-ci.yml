@@ -9,7 +9,7 @@ on:
 
 jobs:
   run-cicd:
-    name: String CI/CD 실행
+    name: ${{ github.ref_name }} CI/CD 실행
     runs-on: ubuntu-latest
     steps:
       - name: branch 체크아웃

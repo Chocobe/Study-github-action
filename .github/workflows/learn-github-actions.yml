@@ -5,7 +5,7 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   push:
     tags-ignore:
-      - 'staging-*'
+      - staging-*
 
 jobs:
   check-bats-version:
