@@ -5,7 +5,9 @@ run-name: run CI/CD of ${{ github.ref_name }} from ${{ github.actor }}
 on:
   push:
     tags:
-      - 'staging-*'
+      - staging-*
+    branches:
+      - main
 
 jobs:
   run-cicd:
