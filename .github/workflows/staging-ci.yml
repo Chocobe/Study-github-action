@@ -25,4 +25,6 @@ jobs:
       - name: test 실행
         run: yarn test
       - name: 빌드
+        env:
+          NODE_ENV: staging
         run: yarn build
