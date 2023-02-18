@@ -6,8 +6,6 @@ on:
   push:
     tags:
       - staging-*
-    branches:
-      - main
 
 jobs:
   run-cicd:
