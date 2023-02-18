@@ -22,3 +22,5 @@ jobs:
         run: yarn install
       - name: lint 실행
         run: yarn lint
+      - name: test 실행
+        run: yarn test
