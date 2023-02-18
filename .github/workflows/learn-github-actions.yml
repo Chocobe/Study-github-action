@@ -2,6 +2,7 @@ name: learn-github-actions
 
 run-name: ${{ github.actor }} is learning GitHub Actions
 
+# DEV-1 에서 수정한 내용
 on:
   push:
     branches:
