@@ -23,14 +23,14 @@ jobs:
       - name: lint 실행
         run: |-
           yarn lint
-          echo "STAGING LINT SUCCESSFULLY"
+          echo "🌈 STAGING LINT SUCCESSFULLY"
       - name: test 실행
         run: |-
           yarn test
-          echo "STAGING TEST SUCCESSFULLY"
+          echo "🧪 STAGING TEST SUCCESSFULLY"
       - name: 빌드
         env:
           NODE_ENV: staging
         run: |-
           yarn build
-          echo "STAGING BUILD SUCCESSFULLY"
+          echo "🚀 STAGING BUILD SUCCESSFULLY"
