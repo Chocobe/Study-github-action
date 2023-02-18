@@ -24,3 +24,5 @@ jobs:
         run: yarn lint
       - name: test 실행
         run: yarn test
+      - name: 빌드
+        run: yarn build
