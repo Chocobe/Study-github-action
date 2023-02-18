@@ -21,16 +21,16 @@ jobs:
       - name: 의존성 설치
         run: yarn install
       - name: lint 실행
-        run: |
+        run: |-
           yarn lint
           echo "STAGING LINT SUCCESSFULLY"
       - name: test 실행
-        run: |
+        run: |-
           yarn test
           echo "STAGING TEST SUCCESSFULLY"
       - name: 빌드
         env:
           NODE_ENV: staging
-        run: |
+        run: |-
           yarn build
           echo "STAGING BUILD SUCCESSFULLY"
