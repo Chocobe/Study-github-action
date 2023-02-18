@@ -4,6 +4,8 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 
 on:
   push:
+    btanch:
+      - *
     tags-ignore:
       - staging-*
 
