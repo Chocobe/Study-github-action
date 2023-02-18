@@ -1,0 +1,24 @@
+name: staging-ci
+
+run-name: run CI/CD of ${{ github.ref_name }} from ${{ github.actor }}
+
+on:
+  push:
+    tags:
+      - 'staging-*'
+
+jobs:
+  run-cicd:
+    name: String CI/CD 실행
+    runs-on: ubuntu-latest
+    steps:
+      - name: branch 체크아웃
+        uses: actions/checkout@v3
+      - name: node 설치
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: 의존성 설치
+        run: yarn install
+      - name: lint 실행
+        run: yarn lint
