@@ -34,3 +34,15 @@ jobs:
         run: |-
           yarn build
           echo "🚀 STAGING BUILD SUCCESSFULLY"
+      - name: 배포
+        uses: reggionick/s3-deploy@v3
+        with:
+          folder: build
+          bucket: ${{ secrets.S3_BUCKET }}
+          bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          invalidation: /*
+          delete-removed: true
+          no-cache: true
+          private: true
+          files-to-include: "*"
